@@ -1,0 +1,26 @@
+﻿@model Personnel
+<hr />
+<fieldset>
+    <legend>Delete Personnel</legend>
+    <input type="hidden" asp-for="Id" readonly>
+    <form asp-action="Delete" method="post">
+        <table>
+            <tr>
+                <td colspan="3"><div asp-validation-summary="All"></div></td>
+            </tr>
+            <tr>
+                <td><label asp-for="Name"></label></td>
+                <td><input asp-for="Name" readonly /></td>
+                <td><span asp-validation-for="Name"></span></td>
+            </tr>
+            <tr>
+                <td><label asp-for="Contact"></label></td>
+                <td><input asp-for="Contact" readonly /></td>
+                <td><span asp-validation-for="Contact"></span></td>
+            </tr>
+            <tr>
+                <td colspan="3"><input onclick="window.location='/personnel'" type="submit" value="Delete" /></td>
+            </tr>
+        </table>
+    </form>
+</fieldset>

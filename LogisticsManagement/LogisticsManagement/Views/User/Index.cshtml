@@ -1,0 +1,40 @@
+﻿@using LogisticsManagement.Models.Authentication
+@model IEnumerable<AppUser>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Users</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<table class="table"">
+    <thead>
+        <tr>
+            <th>
+                Username
+            </th>
+            <th>
+                Email
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.UserName
+                </td>
+                <td>
+                    @item.Email
+                </td>
+                
+            </tr>
+        }
+    </tbody>
+</table>

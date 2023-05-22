@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Personnel>
+@{
+    ViewData["Title"] = "Index";
+}
+<div>
+    <a href="/personnel/create">ADD</a>
+    <a href="/">HOME</a>
+</div>
+<div id="placeholder"></div>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Contact</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Contact</td>
+                <td>
+                    <button class="btn btn-primary" onclick="update('@item.Id')" asp-route-id="@item.Id">Update</button>
+                    <button class="btn btn-danger" onclick="remove('@item.Id')" asp-route-id="@item.Id">Delete</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section scripts {
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        function update(id) {
+            $.ajax({
+                url: '/personnel/update',
+                type: 'get',
+                data: { 'id': id },
+                success: function (data) {
+                    $('#placeholder').html(data);
+                },
+                error: function (result) {
+                    alert("Error: " + result);
+                }
+            });
+        }
+        function remove(id) {
+            $.ajax({
+                url: '/personnel/delete',
+                type: 'get',
+                data: { 'id': id },
+                success: function (data) {
+                    $('#placeholder').html(data);
+                },
+                error: function (result) {
+                    alert("Error: " + result);
+                }
+            });
+        }
+    </script>
+}
