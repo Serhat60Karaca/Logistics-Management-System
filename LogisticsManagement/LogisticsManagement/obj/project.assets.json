@@ -10271,11 +10271,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lenovo\\Desktop\\ford\\LogisticsManagement\\LogisticsManagement\\LogisticsManagement.csproj",
+      "projectUniqueName": "C:\\Users\\lenovo\\Desktop\\Logistics\\Logistics-Management-System\\LogisticsManagement\\LogisticsManagement\\LogisticsManagement.csproj",
       "projectName": "LogisticsManagement",
-      "projectPath": "C:\\Users\\lenovo\\Desktop\\ford\\LogisticsManagement\\LogisticsManagement\\LogisticsManagement.csproj",
+      "projectPath": "C:\\Users\\lenovo\\Desktop\\Logistics\\Logistics-Management-System\\LogisticsManagement\\LogisticsManagement\\LogisticsManagement.csproj",
       "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lenovo\\Desktop\\ford\\LogisticsManagement\\LogisticsManagement\\obj\\",
+      "outputPath": "C:\\Users\\lenovo\\Desktop\\Logistics\\Logistics-Management-System\\LogisticsManagement\\LogisticsManagement\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
